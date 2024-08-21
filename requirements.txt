@@ -1,2 +1,16 @@
 Flask
 gunicorn
+langchain_community
+huggingface-hub
+transformers
+sentencepiece
+protobuf
+langchain
+PyPDF2
+faiss-gpu-cu12
+tiktoken
+streamlit
+llama-index-embeddings-huggingface
+llama-index-embeddings-instructor
+llama-index
+langchain-huggingface

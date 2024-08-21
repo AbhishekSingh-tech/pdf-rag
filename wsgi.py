@@ -15,4 +15,5 @@ def status():
 def create_prediction():
     data = request.data or '{}'
     body = json.loads(data)
-    return jsonify(predict(body))
+    print(body)
+    return jsonify(predict(body)["prediction"].rpartition("Helpful Answer:")[-1])
