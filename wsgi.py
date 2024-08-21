@@ -17,11 +17,12 @@ def create_prediction():
     data = request.data or '{}'
     body = json.loads(data)
     print(body)
+    rag_response = eci_predict(body)["prediction"].rpartition("Helpful Answer:")[-1]
     response_data = {
         "response_type": "comment",
         "username": "ECI AI",
         "icon_url": "https://mattermost.com/wp-content/uploads/2022/02/icon.png",
-        "text": "rag_response"
+        "text": rag_response
     }
     return jsonify(response_data)
     # return jsonify(predict(body)["prediction"].rpartition("Helpful Answer:")[-1])
